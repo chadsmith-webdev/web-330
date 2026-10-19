@@ -43,6 +43,11 @@ function playDrawPoker() {
       drawButton.disabled = false; // Turn on the Draw button
       standButton.disabled = false; // Turn on the Stand Button
       statusBox.textContent = ''; // Erase any status messages
+
+      // Reduce the bank by the size of the bet
+      bankBox.value = pokerGame.placeBet();
+    } else {
+      statusBox.textContent = 'Insufficient Funds';
     }
   });
 
