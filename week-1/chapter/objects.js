@@ -62,6 +62,11 @@ function pokerDeck() {
     });
   };
 }
+
+// Construction function for poker hands */
+function pokerHand(handLength) {
+  this.cards = new Array(handLength);
+}
 /* ------------------------------------------------+
    | The handType() function returns a text string of |
    | the type of hand held by 5-card poker hand.      |
