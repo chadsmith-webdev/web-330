@@ -27,6 +27,11 @@ function pokerCard(cardSuit, cardRank) {
   this.rank = cardRank;
 }
 
+// Method to reference the image of the poker card
+pokerCard.prototype.cardImage = function () {
+  return this.rank + '_' + this.suit + '.png';
+};
+
 /* Constructor function for poker decks */
 function pokerDeck() {
   // List the suits and ranks
