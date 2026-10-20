@@ -54,6 +54,13 @@ function pokerDeck() {
       this.cards.push(new pokerCard(suits[i], ranks[j]));
     }
   }
+
+  // method to randomly sort the cards in the deck
+  this.shuffle = function () {
+    this.cards.sort(function () {
+      return 0.5 - Math.random();
+    });
+  };
 }
 /* ------------------------------------------------+
    | The handType() function returns a text string of |
