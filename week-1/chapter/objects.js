@@ -63,11 +63,10 @@ function pokerDeck() {
   };
 
   // Method to deal cards from the deck into a hand
-  this.dealTo -
-    function (pokerHand) {
-      let cardsDealt = pokerHand.cards.length;
-      pokerHand.cards = this.cards.splice(0, cardsDealt);
-    };
+  this.dealTo = function (pokerHand) {
+    let cardsDealt = pokerHand.cards.length;
+    pokerHand.cards = this.cards.splice(0, cardsDealt);
+  };
 }
 
 // Construction function for poker hands */
