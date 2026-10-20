@@ -27,6 +27,34 @@ function pokerCard(cardSuit, cardRank) {
   this.rank = cardRank;
 }
 
+/* Constructor function for poker decks */
+function pokerDeck() {
+  // List the suits and ranks
+  let suits = ['clubs', 'diamonds', 'hearts', 'spades'];
+  let ranks = [
+    '2',
+    '3',
+    '4',
+    '5',
+    '6',
+    '7',
+    '8',
+    '9',
+    '10',
+    'jack',
+    'queen',
+    'king',
+  ];
+  this.cards = [];
+
+  // Add a card for each combination of suit and rank
+  for (let i = 0; i < 4; i++) {
+    for (let j = 0; j < 13; j++) {
+      // Add a pokerCard object
+      this.cards.push(new pokerCard(suits[i], ranks[j]));
+    }
+  }
+}
 /* ------------------------------------------------+
    | The handType() function returns a text string of |
    | the type of hand held by 5-card poker hand.      |
