@@ -21,6 +21,12 @@ let pokerGame = {
   },
 };
 
+/* Constructor function for poker cards */
+function pokerCard(cardSuit, cardRank) {
+  this.suit = cardSuit;
+  this.rank = cardRank;
+}
+
 /* ------------------------------------------------+
    | The handType() function returns a text string of |
    | the type of hand held by 5-card poker hand.      |
