@@ -55,12 +55,19 @@ function pokerDeck() {
     }
   }
 
-  // method to randomly sort the cards in the deck
+  // Method to randomly sort the cards in the deck
   this.shuffle = function () {
     this.cards.sort(function () {
       return 0.5 - Math.random();
     });
   };
+
+  // Method to deal cards from the deck into a hand
+  this.dealTo -
+    function (pokerHand) {
+      let cardsDealt = pokerHand.cards.length;
+      pokerHand.cards = this.cards.splice(0, cardsDealt);
+    };
 }
 
 // Construction function for poker hands */
