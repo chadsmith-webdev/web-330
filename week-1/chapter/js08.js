@@ -31,6 +31,9 @@ function playDrawPoker() {
   let myDeck = new pokerDeck();
   myDeck.shuffle();
 
+  // Create an empty poker hand object
+  let myHand = new pokerHand(5);
+
   // Display the current bank values
   bankBox.value = pokerGame.currentBank;
 
