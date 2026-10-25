@@ -101,6 +101,9 @@ function playDrawPoker() {
 
     // Evaluate the hand drawn by user
     statusBox.textContent = myHand.getHandValue();
+
+    // Update the bank value
+    bankBox.value = pokerGame.payBet(statusBox.textContent);
   });
 
   standButton.addEventListener('click', function () {
@@ -113,6 +116,9 @@ function playDrawPoker() {
     // Evaluate the hand drawn by user
     statusBox.textContent = myHand.getHandValue();
   });
+
+  // Update the bank value
+  bankBox.value = pokerGame.payBet(statusBox.textContent);
 
   // Reload the current page when the Reset button is clicked
   resetButton.addEventListener('click', function () {

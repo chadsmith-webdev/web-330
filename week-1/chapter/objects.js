@@ -15,8 +15,41 @@
 let pokerGame = {
   currentBank: null,
   currentBet: null,
-  placeBet: function () {
-    this.currentBank -= this.currentBet;
+  placeBet() {
+    return this.currentBank;
+  },
+  placeBet: function (type) {
+    let pay = 0;
+    switch (type) {
+      case 'Royal Flush':
+        pay = 250;
+        break;
+      case 'Straight Flush':
+        pay = 50;
+        break;
+      case 'Four of a Kind':
+        pay = 25;
+        break;
+      case 'Full House':
+        pay = 9;
+        break;
+      case 'Flush':
+        pay = 6;
+        break;
+      case 'Straight':
+        pay = 4;
+        break;
+      case 'Three of a Kind':
+        pay = 3;
+        break;
+      case 'Two Pair':
+        pay = 2;
+        break;
+      case 'Jacks or Better':
+        pay = 1;
+        break;
+    }
+    this.currentBank += pay * this.currentBet;
     return this.currentBank;
   },
 };
