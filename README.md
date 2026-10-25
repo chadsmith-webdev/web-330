@@ -1,4 +1,4 @@
-# WEB 330 Enterprise JavaScript
+# WEB 330 Enterprise JavaScript I
 
 ## Contributors
 
