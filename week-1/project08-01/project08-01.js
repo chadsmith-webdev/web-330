@@ -18,6 +18,32 @@ function timer(min, sec) {
   this.timeID = null;
 }
 
+// Method to pause timer
+timer.prototype.runPause = function (timer, minBox, secBox) {
+  if (timer.timeID) {
+    window.clearInterval(timer.timeID);
+    timer.timeID = null;
+  } else {
+    timer.timeID = window.setInterval(countdown, 1000);
+  }
+
+  // Function to update timer
+  function countdown() {
+    if (timer.seconds > 0) {
+      timer.seconds--;
+    } else if (timer.minutes > 0) {
+      timer.minutes--;
+      timer.seconds = 59;
+    } else {
+      window.clearInterval(timer.timeID);
+      timer.timeID = null;
+    }
+
+    minBox.value = timer.minutes;
+    secBox.value = timer.seconds;
+  }
+};
+
 /*---------------Interface Code -----------------*/
 
 /* Interface Objects */
