@@ -50,3 +50,17 @@ timer.prototype.runPause = function (timer, minBox, secBox) {
 let minBox = document.getElementById('minutesBox');
 let secBox = document.getElementById('secondsBox');
 let runPauseTimer = document.getElementById('runPauseButton');
+
+let myTimer = new timer(minBox.value, secBox.value);
+
+minBox.onchange = function () {
+  myTimer.minutes = minBox.value;
+};
+
+secBox.onchange = function () {
+  myTimer.seconds = secBox.value;
+};
+
+runPauseTimer.onclick = function () {
+  myTimer.runPause(myTimer, minBox, secBox);
+};
