@@ -78,6 +78,12 @@ function pokerDeck() {
 function pokerHand(handLength) {
   this.cards = new Array(handLength);
 }
+
+// Method to replace a card in a hand with a card from a deck
+pokerHand.prototype.replaceCard = function (index, pokerDeck) {
+  this.cards[index] = pokerDeck.cards.shift();
+};
+
 /* ------------------------------------------------+
    | The handType() function returns a text string of |
    | the type of hand held by 5-card poker hand.      |
