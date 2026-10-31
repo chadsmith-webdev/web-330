@@ -9,3 +9,43 @@
 */
 
 /* Your CSS goes here */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: fantasy;
+  padding-top: 100px;
+}
+
+#mainContainer {
+  background-color: coral;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin: 0 auto;
+  padding: 20px;
+  width: min(90%, 360px);
+  border-radius: 8px;
+}
+
+#characterForm {
+  width: 100%;
+  padding: 16px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 20%);
+}
+
+#characterOutput {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px;
+  background-color: #fff3e8;
+  border-radius: 8px;
+  font-size: 1rem;
+}
