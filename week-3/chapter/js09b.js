@@ -9,3 +9,7 @@
 
       Filename: js09b.js
  */
+
+// Retrieve the text of the query string
+let qString = location.search.slice(1);
+console.log(qString);
