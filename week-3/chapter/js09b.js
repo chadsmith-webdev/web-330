@@ -13,6 +13,10 @@
 // Retrieve the text of the query string
 let qString = location.search.slice(1);
 
+// Replace the encoded characters in the query string
+qString = qString.replace(/\+/g, ' ');
+qString = decodeURIComponent(qString);
+
 // Split the field=name pairs into separate array items
 let formData = qString.split(/&/g);
 
@@ -35,7 +39,3 @@ for (let items of formData) {
   inputBox.disabled = true;
   document.getElementById('contactInfo').appendChild(inputBox);
 }
-
-// Replace the encoded characters in the query string
-qString = qString.replace(/\+/g, ' ');
-qString = decodeURIComponent(qString);
