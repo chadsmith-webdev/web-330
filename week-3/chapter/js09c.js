@@ -40,3 +40,10 @@ for (let item of keys) {
   // Append each key=name pair as a table row
   document.getElementById('prefTable').appendChild(newRow);
 }
+
+// Remove Eating Well keys when the Remove Preference button is clicked
+document.getElementById('removePrefBtn').onlcick = function () {
+  for (let item of keys) {
+    localStorage.removeItem(item);
+  }
+};
