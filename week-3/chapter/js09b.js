@@ -13,3 +13,7 @@
 // Retrieve the text of the query string
 let qString = location.search.slice(1);
 console.log(qString);
+
+// Replace the encoded characters in the query string
+qString = qString.replace(/\+/g, ' ');
+qString = decodeURIComponent(qString);
