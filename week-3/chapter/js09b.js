@@ -18,7 +18,7 @@ let formData = qString.split(/&/g);
 
 for (let items of formData) {
   // Extract the filed names and values
-  let filedValuePair = items.split(/=/);
+  let fieldValuePair = items.split(/=/);
   let fieldName = fieldValuePair[0];
   let fieldValue = fieldValuePair[1];
 
