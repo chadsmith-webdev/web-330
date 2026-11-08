@@ -1,9 +1,5 @@
 'use strict';
 
-const {
-  accessedDynamicData,
-} = require('next/dist/server/app-render/dynamic-rendering');
-
 /*    JavaScript 7th Edition
       Chapter 9
       Project 09-01
